@@ -13,9 +13,7 @@ if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!');
 }
 
-
-
-const bot = new Telegraf(token);
+const bot = new Telegraf(token, { polling: true });
 
 const startBot = require('./src/commands/start');
 startBot(bot);
