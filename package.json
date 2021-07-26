@@ -7,6 +7,9 @@
     "dev": "nodemon bot.js",
     "start": "node bot.js"
   },
+  "engines": {
+    "node": "14.3.0"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -22,6 +25,7 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "google-spreadsheet": "^3.1.15",
     "nodemon": "^2.0.12",
     "telegraf": "^4.4.0",
