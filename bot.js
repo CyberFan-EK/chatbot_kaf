@@ -12,9 +12,9 @@ const chatIdUsers = [];
 if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!');
 }
-
+const keepActive = require('./server');
 const bot = new Telegraf(token, { polling: true });
-
+keepActive();
 const startBot = require('./src/commands/start');
 startBot(bot);
 
