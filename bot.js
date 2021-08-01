@@ -13,10 +13,9 @@ if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!');
 }
 
-// for heroku bur working only 30min.
-const keepActive = require('./server');
 const bot = new Telegraf(token, { polling: true });
-keepActive();
+// for heroku bur working only 30min.
+
 const startBot = require('./src/commands/start');
 startBot(bot);
 
@@ -73,3 +72,5 @@ bot.launch();
 
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
+
+module.exports = bot;
