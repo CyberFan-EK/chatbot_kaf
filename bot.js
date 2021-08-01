@@ -19,12 +19,12 @@ const bot = new Telegraf(token, { polling: true });
 const startBot = require('./src/commands/start');
 startBot(bot);
 
-require('http')
-  .createServer()
-  .listen(process.env.PORT || 5000)
-  .on('request', function (req, res) {
-    res.end('');
-  });
+// require('http')
+//   .createServer()
+//   .listen(process.env.PORT || 5000)
+//   .on('request', function (req, res) {
+//     res.end('');
+//   });
 
 // Прослушка веток Для абитуриентов
 const enrolletBranch = require('./src/enrolle/start');
