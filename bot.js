@@ -12,6 +12,8 @@ const chatIdUsers = [];
 if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!');
 }
+
+// for heroku bur working only 30min.
 const keepActive = require('./server');
 const bot = new Telegraf(token, { polling: true });
 keepActive();
