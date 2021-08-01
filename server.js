@@ -11,7 +11,7 @@ function keepAlive() {
     res.json({ version: packageInfo.version });
   });
 
-  const server = app.listen(process.env.PORT, function () {
+  const server = app.listen(process.env.PORT || 3000 , function () {
     const host = server.address().address;
     const port = server.address().port;
 
